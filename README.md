@@ -11,7 +11,7 @@ binary installer
 
 ## SHORTCUTS
 
-- CMND + K (clear)
+- CMND + K (clear terminal)
 
 ## PUT YOUR NAME
 
@@ -143,10 +143,41 @@ You always start in/with MASTER branch; on GITHUB it is called MAIN
 
 This is the commit you are in, working on or pointing to. Always the last unless you change.
 
-#### Change HEAD to another branch
+#### Change HEAD to another branch (and last commit of it)
 
 ```
 & git switch <branch-name>
+```
+You also use the above to get the head back to normal after your do the below.
+#### Change HEAD to another commit
+```
+& git checkout <commit-hash>
+```
+
+## REPORT CHANGES
+Check differences between unstaged changes and last commit. It doesn't include new files.
+```
+& git diff
+```
+Check differences between changes (staged or unstaged) and HEAD incl new files.
+```
+& git diff HEAD
+```
+...or specific files
+```
+& git diff HEAD <file1>
+& git diff HEAD <file1> <file2>
+```
+Check differences between branches and commits
+```
+& git diff <branch1>..<branch2>
+
+& git diff <commit1>..<commit2>
+```
+Check differences between HEAD and staged changes.
+```
+& git diff --staged
+& git diff --cached
 ```
 
 ## MERGING
