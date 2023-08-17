@@ -1,4 +1,4 @@
-## My favorite terminal commands
+# My favorite terminal commands
 
 https://git-scm.com/
 
@@ -9,112 +9,193 @@ git --version
 https://git-scm.com/download/mac
 binary installer
 
-### SHORTCUTS
+## SHORTCUTS
 
 - CMND + K (clear)
 
-### PUT YOUR NAME
+## PUT YOUR NAME
 
 ```
 $ git config user.name
 $ git config --global user.name "My Name"
 ```
 
-### PUT YOUR EMAIL
+## PUT YOUR EMAIL
 
 - Same as above but with .email
 
-### NAVEGATION COMMANDS
+## NAVEGATION COMMANDS
 
 ```
 $ ls
 $ ls folderName
 $ ls folderName/secondFolder
-$ ls -a (show hidden files)
 $ open .
-$ pwd (where are you)
 $ cd
 $ cd ..
-$ q (when it gets crazy)
 ```
 
-### CREATION/DELETE COMMANDS
+#### Show hidden files
 
 ```
-$ touch noteFiles.txt (create files)
-$ touch noteFiles.txt list.txt (create more files)
-$ touch folderName/noteFiles.txt list.txt (create files somewhere)
-$ mkdir folderName (create folder)
-$ rm file.txt
-$ rm -rf folderName
+$ ls -a
 ```
 
-### CREATE REPO (creates .git hidden folder) don't create repos inside repos
+#### Quit
+
+```
+$ q
+```
+
+#### Tells you where you are
+
+```
+$ pwd
+```
+
+## CREATION/DELETE COMMANDS
+
+#### Create files
+
+```
+$ touch <noteFiles.txt>
+```
+
+#### Create more files
+
+```
+$ touch <noteFiles.txt> <list.txt>
+```
+
+#### Create files somewhere else
+
+```
+$ touch <folderName>/<noteFiles.txt> <list.txt>
+```
+
+#### Create folder
+
+```
+$ mkdir folderName
+```
+
+#### Remove files or folders
+
+```
+$ rm <file.txt>
+$ rm -rf <folderName>
+```
+
+## CREATE REPO
+
+Creates .git hidden folder. Never create repos inside repos!
 
 ```
 $ git status
 $ git init
 ```
 
-### LOG COMMITS/CHECKPOINTS (one task as a time!)
+## LOG COMMITS/CHECKPOINTS (one task as a time!)
 
 ```
-$ git add file1 file2 (you can stage and commit some files and not others)
+$ git add <file1> <file2>
 $ git add .
-$ git commit -m "start project" (this commits what's staged but you can still have other unmodified files)
 ```
 
-### COMMIT REPORTS
+#### It is doable to stage and commit some files and not others
+
+#### This commits what's staged but you can still have other unmodified files
 
 ```
-$ git log (each has an ID)
-$ git log --oneline (gets a shorter ID)
+$ git commit -m "start project"
 ```
 
-### BRANCHES
-
-You always start in MASTER branch; on GITHUB it is called MAIN
+## COMMIT REPORTS
 
 ```
-& git branch (from the upcoming list, the HEAD will appear as *)
-& git branch branch-name (creates new branch but HEAD doesn't move)
-& git branch -v (list + last commit from each)
+$ git log
+$ git log --oneline
 ```
 
-### BRANCHES.HEAD
+## BRANCHES
+
+You always start in/with MASTER branch; on GITHUB it is called MAIN
+
+#### Shows what branches do you have. From the upcoming list, HEAD will appear with a \*
+
+```
+& git branch
+```
+
+#### Creates new branch but HEAD doesn't move
+
+```
+& git branch <branch-name>
+```
+
+#### List + last commit from each
+
+```
+& git branch -v
+```
+
+## HEAD
 
 This is the commit you are in, working on or pointing to. Always the last unless you change.
 
-```
-& git switch branch-name (change HEAD to another branch)
-```
-
-### MERGING (branches, not commits. So it makes sense to some degree to remove the merged branch)
+#### Change HEAD to another branch
 
 ```
-$ git merge secondBranch (HEAD has to be on branch you want to merge changes to)
+& git switch <branch-name>
 ```
 
-$
-$
+## MERGING
 
-### GITHUB
+What you merge are branches, not commits. So it makes sense to some degree to remove the merged branch after the merging.
+
+#### HEAD has to be on branch you want to merge changes to
 
 ```
-$ git clone <gitHubRepoUrl> (creates the project folder where you are locally)
-$ git remote (you see the reference (origin) of github)
-$ git remote -v (the above plus the url)
-$ git remote add origin <gitHubRepoUrl> (sets up a remote)
+$ git merge <secondBranch>
+```
+
+## GITHUB
+
+#### Creates project folder where you are locally
+
+```
+$ git clone <gitHubRepoUrl>
+```
+
+#### You see the remote (url reference); normally called "origin"
+
+```
+$ git remote
+```
+
+#### The above plus the url
+
+```
+$ git remote -v
+```
+
+#### Sets up a remote
+
+```
+$ git remote add origin <gitHubRepoUrl>
+```
+
+#### Pushes a branch to github
+
+```
 $ git push <remote> <branch>
 ```
 
-- Origin (my gitHubRepoUrl) is the conventional name for the url. You can have more than one
+Origin (a.k.a github-repo-url or remote) is the conventional name for the url. You can have more than one if you want to.
 
-### OTHER OPTIONS THAT I WON'T USE AT THE MOMENT
+## OTHER POSSIBLE OPTIONS
 
 - There's a way to add files that you forgot in the last commit (amend)
 - You can create a huge message with an editor insted of using the -m on logs
 - You can delete and rename branches
 - You can delete and rename remote names (which is typically origin)
-  $
-$
