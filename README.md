@@ -34,6 +34,10 @@ $ open .
 $ cd
 $ cd ..
 ```
+Opens the path you are in with VSC.
+```
+$ code .
+```
 
 #### Show hidden files
 
@@ -187,7 +191,7 @@ What you merge are branches, not commits. So it makes sense to some degree to re
 #### HEAD has to be on branch you want to merge changes to
 
 ```
-$ git merge <secondBranch>
+$ git merge <second-branch>
 ```
 
 ## GITHUB
@@ -195,7 +199,7 @@ $ git merge <secondBranch>
 #### Creates project folder where you are locally
 
 ```
-$ git clone <gitHubRepoUrl>
+$ git clone <github-repo-url>
 ```
 
 #### You see the remote (url reference); normally called "origin"
@@ -213,13 +217,18 @@ $ git remote -v
 #### Sets up a remote
 
 ```
-$ git remote add origin <gitHubRepoUrl>
+$ git remote add origin <github-repo-url>
+```
+
+#### Removes a remote
+```
+$ git remote remove <remote(origin)>
 ```
 
 #### Pushes a branch to github
 
 ```
-$ git push <remote> <branch>
+$ git push <remote(origin)> <branch>
 ```
 
 Origin (a.k.a github-repo-url or remote) is the conventional name for the url. You can have more than one if you want to.
