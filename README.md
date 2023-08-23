@@ -150,11 +150,12 @@ You always start in/with MASTER branch; on GITHUB it is called MAIN
 This is the commit you are in, working on or pointing to. Always the last unless you change.
 
 #### Change HEAD to another branch (and last commit of it)
+NOTE: This is also the way to access a branch that's only on the Remote Tracking Branch.
 
 ```
 & git switch <branch-name>
 ```
-You also use the above to get the head back to normal after your do the below.
+You also use the above to get the head back to normal after you do the below.
 #### Change HEAD to another commit
 ```
 & git checkout <commit-hash>
@@ -198,7 +199,7 @@ $ git merge <second-branch>
 
 ## GITHUB
 
-SIDE NOTE: When the remote is updated on GitHub and you check the status of the local repo, it will tell you that you are up to date with the remote, even if you are not. It's only after you fetch the changes that your computer knows about the new stuff. This is because the reference to the remote on your computer (called Remote Tracking Branch) doesn't update automatically. In other words, the remote is not what's on GitHub but what's on the Remote Tracking Branch.
+ NOTE: When the remote is updated on GitHub and you check the status of the local repo, it will tell you that you are up to date with the remote, even if you are not. It's only after you fetch the changes that your computer knows about the new stuff. This is because the reference to the remote on your computer (called Remote Tracking Branch) doesn't update automatically. In other words, the remote is not what's on GitHub but what's on the Remote Tracking Branch. This one only updates by fetching or pulling (I think).
 
 #### Clones project folder where you are locally
 
@@ -218,10 +219,16 @@ $ git remote
 $ git remote -v
 ```
 
-#### Sets up a remote
+#### Sets up a remote (collab tip: you normall do it from your fork)
 
 ```
-$ git remote add origin <github-repo-url>
+$ git remote add origin <github-repo-url(yours)>
+```
+
+If you want a remote just to get updates, convention is to call it upstream:
+
+```
+$ git remote add upstream <github-repo-url(original)>
 ```
 
 #### Removes a remote
@@ -252,7 +259,6 @@ $ git pull <remote(origin)> <branch>
 ```
 $ git branch -r
 ```
-
 
 Origin (a.k.a github-repo-url or remote or anotherhub-website) is the conventional name for the url. You can have more than one if you want to.
 
