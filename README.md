@@ -15,17 +15,6 @@ CMND + SHIFT + V (README preview on VSC)
 
 - CMND + K (clear terminal)
 
-## PUT YOUR NAME
-
-```
-$ git config user.name
-$ git config --global user.name "My Name"
-```
-
-## PUT YOUR EMAIL
-
-- Same as above but with .email
-
 ## NAVEGATION COMMANDS
 
 ```
@@ -92,6 +81,17 @@ $ rm <file.txt>
 $ rm -rf <folderName>
 ```
 
+## GIT SETUP
+
+```
+$ git config user.name
+$ git config --global user.name "My Name"
+```
+
+Put your email:
+
+- Same as above but with .email
+
 ## CREATE REPO
 
 Creates .git hidden folder. Never create repos inside repos!
@@ -125,8 +125,6 @@ $ git log --oneline
 
 ## BRANCHES
 
-You always start in/with MASTER branch; on GITHUB it is called MAIN
-
 #### Shows what branches do you have. From the upcoming list, HEAD will appear with a \*
 
 ```
@@ -143,6 +141,12 @@ You always start in/with MASTER branch; on GITHUB it is called MAIN
 
 ```
 & git branch -v
+```
+
+#### Removes branch
+
+```
+& git branch -d <branch-name>
 ```
 
 ## HEAD
@@ -266,5 +270,4 @@ Origin (a.k.a github-repo-url or remote or anotherhub-website) is the convention
 
 - There's a way to add files that you forgot in the last commit (amend).
 - You can create a huge message with an editor insted of using the -m on logs
-- You can delete and rename branches
 - You can delete and rename remote names (which is typically origin)
