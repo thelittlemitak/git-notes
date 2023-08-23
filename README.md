@@ -1,4 +1,4 @@
-# My favorite terminal commands
+# My favorite Git and GitHub terminal commands (incl. basic navegation)
 
 https://git-scm.com/
 
@@ -8,6 +8,8 @@ git --version
 
 https://git-scm.com/download/mac
 binary installer
+
+CMND + SHIFT + V (README preview on VSC)
 
 ## SHORTCUTS
 
@@ -196,7 +198,9 @@ $ git merge <second-branch>
 
 ## GITHUB
 
-#### Creates project folder where you are locally
+SIDE NOTE: When the remote is updated on GitHub and you check the status of the local repo, it will tell you that you are up to date with the remote, even if you are not. It's only after you fetch the changes that your computer knows about the new stuff. This is because the reference to the remote on your computer (called Remote Tracking Branch) doesn't update automatically. In other words, the remote is not what's on GitHub but what's on the Remote Tracking Branch.
+
+#### Clones project folder where you are locally
 
 ```
 $ git clone <github-repo-url>
@@ -231,11 +235,30 @@ $ git remote remove <remote(origin)>
 $ git push <remote(origin)> <branch>
 ```
 
-Origin (a.k.a github-repo-url or remote) is the conventional name for the url. You can have more than one if you want to.
+#### Fetches changes from github (you can also use it without the branch) / Updates Remote Tracking Branch
+
+```
+$ git fetch <remote(origin)> <branch>
+```
+
+#### Fetches changes from github and merges it to the local repo. So it matters where the head is!
+
+```
+$ git pull <remote(origin)> <branch>
+```
+
+#### Check Remote Tracking Branch
+
+```
+$ git branch -r
+```
+
+
+Origin (a.k.a github-repo-url or remote or anotherhub-website) is the conventional name for the url. You can have more than one if you want to.
 
 ## OTHER POSSIBLE OPTIONS
 
-- There's a way to add files that you forgot in the last commit (amend)
+- There's a way to add files that you forgot in the last commit (amend).
 - You can create a huge message with an editor insted of using the -m on logs
 - You can delete and rename branches
 - You can delete and rename remote names (which is typically origin)
