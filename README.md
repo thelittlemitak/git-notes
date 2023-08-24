@@ -270,4 +270,3 @@ Origin (a.k.a github-repo-url or remote or anotherhub-website) is the convention
 
 - There's a way to add files that you forgot in the last commit (amend).
 - You can create a huge message with an editor insted of using the -m on logs
-- You can delete and rename remote names (which is typically origin)
