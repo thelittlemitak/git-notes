@@ -118,9 +118,16 @@ $ git commit -m "start project"
 
 ## COMMIT REPORTS
 
+This is for the branch you are in:
 ```
 $ git log
 $ git log --oneline
+```
+
+You can also check others:
+```
+$ git log <branch>
+$ git log --oneline <branch>
 ```
 
 ## BRANCHES
@@ -204,6 +211,8 @@ $ git merge <second-branch>
 ## GITHUB
 
  NOTE: When the remote is updated on GitHub and you check the status of the local repo, it will tell you that you are up to date with the remote, even if you are not. It's only after you fetch the changes that your computer knows about the new stuff. This is because the reference to the remote on your computer (called Remote Tracking Branch) doesn't update automatically. In other words, the remote is not what's on GitHub but what's on the Remote Tracking Branch. This one only updates by fetching or pulling (I think).
+
+ NOTE2: When you click on "This branch is X commits behind Y:<_branch>.", the commits show backwards in time!
 
 #### Clones project folder where you are locally
 
