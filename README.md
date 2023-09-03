@@ -14,6 +14,7 @@ CMND + SHIFT + V (README preview on VSC)
 ## SHORTCUTS
 
 - CMND + K (clear terminal)
+- CTRL + C (leave live servers)
 
 ## NAVEGATION COMMANDS
 
@@ -155,6 +156,8 @@ $ git log --oneline <branch>
 ```
 & git branch -d <branch-name>
 ```
+
+Sometimes it asks for the D to be capital as a double check.
 
 ## HEAD
 
