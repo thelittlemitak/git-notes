@@ -80,6 +80,7 @@ $ mkdir folderName
 ```
 $ rm <file.txt>
 $ rm -rf <folderName>
+$ rm -rf .git
 ```
 
 ## GIT SETUP
