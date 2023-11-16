@@ -271,7 +271,9 @@ $ git fetch <remote(origin)> <branch>
 $ git pull <remote(origin)> <branch>
 ```
 
-#### Check Remote Tracking Branch
+#### Check Remote Tracking Branches
+
+This was written before as 'Branch' and not 'Branches'. Please notice this is a key aspect in order to merge a recently fetched upstream since you need to put the branch after the remote (e.g. upstream/main) and for that you need to know the name.
 
 ```
 $ git branch -r
