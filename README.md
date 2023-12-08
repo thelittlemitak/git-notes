@@ -91,6 +91,12 @@ $ cat -n <file.txt>
 $ cat <file.txt> | grep --color <word-that-you-want-to-highlight>
 ```
 
+#### Console log
+
+```
+$ echo <whatever-you-want-to-print>
+```
+
 ## GIT SETUP
 
 ```
