@@ -83,6 +83,14 @@ $ rm -rf <folderName>
 $ rm -rf .git
 ```
 
+#### Show text content (you can also use it to merge or show more files)
+
+```
+$ cat <file.txt>
+$ cat -n <file.txt>
+$ cat <file.txt> | grep --color <word-that-you-want-to-highlight>
+```
+
 ## GIT SETUP
 
 ```
