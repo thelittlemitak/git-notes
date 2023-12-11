@@ -134,7 +134,7 @@ $ git commit -m "start project"
 
 ## COMMIT REPORTS
 
-This is for the branch you are in:
+This is for the branch you are in (you will see also what's before the base; like in a normal branch):
 ```
 $ git log
 $ git log --oneline
@@ -179,7 +179,7 @@ Sometimes it asks for the D to be capital as a double check.
 This is the commit you are in, working on or pointing to. Always the last unless you change.
 
 #### Change HEAD to another branch (and last commit of it)
-NOTE: This is also the way to access a branch that's only on the Remote Tracking Branch.
+NOTE: This is also the way to access a branch that's only on the Remote Tracking Branch (???). It also creates a new one if the name doesn't exist yet.
 
 ```
 & git switch <branch-name>
@@ -226,9 +226,15 @@ What you merge are branches, not commits. So it makes sense to some degree to re
 $ git merge <second-branch>
 ```
 
+#### You can also rebase your branch to the last commit of the master branch
+
+```
+$ git rebase
+```
+
 ## GITHUB
 
- NOTE: When the remote is updated on GitHub and you check the status of the local repo, it will tell you that you are up to date with the remote, even if you are not. It's only after you fetch the changes that your computer knows about the new stuff. This is because the reference to the remote on your computer (called Remote Tracking Branch) doesn't update automatically. In other words, the remote is not what's on GitHub but what's on the Remote Tracking Branch. This one only updates by fetching or pulling (I think).
+NOTE: When the remote is updated on GitHub and you check the status of the local repo, it will tell you that you are up to date with the remote, even if you are not. It's only after you fetch the changes that your computer knows about the new stuff. This is because the reference to the last commit of the remote on your computer (called Remote Tracking Branch) doesn't update automatically. In other words, the remote is not what's on GitHub but what's on the Remote Tracking Branch. This one only updates by fetching or pulling.
 
  NOTE2: When you click on "This branch is X commits behind Y:<_branch>.", the commits show backwards in time!
 
@@ -277,6 +283,18 @@ $ git push <remote(origin)> <branch>
 
 ```
 $ git fetch <remote(origin)> <branch>
+```
+
+You need to afterwards move to this last commit of the remote since locally, you will be behind
+
+```
+git merge --ff-only origin/master
+```
+
+This updates all branches. You normally won't use this one
+
+```
+$ git fetch <remote(origin)>
 ```
 
 #### Fetches changes from github and merges it to the local repo. So it matters where the head is!
